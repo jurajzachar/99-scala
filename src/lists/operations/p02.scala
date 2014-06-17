@@ -2,11 +2,11 @@ package lists.operations
 
 object p02 {
   println("Find the last but one element of a list")
-                                                  //> Find the last but one element of a list
+                                                  
   //scala> penultimate(List(1, 1, 2, 3, 5, 8))
   //res0: Int = 5
 
-  val l = List(1, 1, 2, 3, 5, 8)                  //> l  : List[Int] = List(1, 1, 2, 3, 5, 8)
+  val l = List(1, 1, 2, 3, 5, 8)                  
 
   def penultimate(x: List[Any]): Any = {
     x match {
@@ -15,7 +15,7 @@ object p02 {
       case x :: xs => penultimate(xs)
       
   	}
-  }                                               //> penultimate: (x: List[Any])Any
+  }                                             
   
-  penultimate(l)                                  //> res0: Any = 5
+  penultimate(l)                                  
 }

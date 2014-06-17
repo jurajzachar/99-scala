@@ -3,7 +3,7 @@ package lists.operations
 object p06 {
   
   println("Find out whether a list is a palindrome.")
-                                                  //> Find out whether a list is a palindrome
+                                                  
   /*
    * scala> isPalindrome(List(1, 2, 3, 2, 1))
 	 * res0: Boolean = true
