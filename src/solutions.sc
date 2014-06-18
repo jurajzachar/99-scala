@@ -3,6 +3,8 @@ object solutions {
                                                   //> Solutions to 99 Scala problems --> http://aperiodic.net/phil/scala/s-99/ 
 	
 	val l = List(1, 1, 2, 3, 5, 8)            //> l  : List[Int] = List(1, 1, 2, 3, 5, 8)
+	val xxl = List(List(1, 1), 2, List(3, List(5, 8)))
+                                                  //> xxl  : List[Any] = List(List(1, 1), 2, List(3, List(5, 8)))
 	
 	import lists.operations.p01
 	p01.last(l)                               //> Find the last element of a list
@@ -27,5 +29,10 @@ object solutions {
  	import lists.operations.p06
  	p06.isPalindrome(List(1, 2, 3, 2, 1))     //> Find out whether a list is a palindrome.
                                                   //| res5: Boolean = true
+ 	p06.isPalindrome(List(1, 2, 3, 2, 2, 1))  //> res6: Boolean = false
  	
+ 	import lists.operations.p07
+ 		p07.flatten(xxl)                  //> Flatten a nested list structure.
+                                                  //| res7: List[Any] = List(1, 1, 2, 3, 5, 8)
+		p07.flatten(List(List(xxl)))      //> res8: List[Any] = List(1, 1, 2, 3, 5, 8)
 }
