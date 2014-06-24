@@ -1,7 +1,9 @@
 package lists.operations
 
 object p13 {
-
+	
+  println(" Run-length encoding of a list (direct solution).")
+  
     def encodeDirect(list: List[Any]): List[(Int, Any)] =  {
       def encode_wrapper(i: Int, list: List[Any]): List[(Int, Any)] = {
         list match {

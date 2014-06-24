@@ -62,7 +62,15 @@ object solutions {
                                                   //| 'e)
  	
  	import lists.operations.p13
- 	
- 	
+ 	p13.encodeDirect(ls)                      //>  Run-length encoding of a list (direct solution).
+                                                  //| res11: List[(Int, Any)] = List((4,'a), (1,'b), (2,'c), (2,'a), (1,'d), (4,'e
+                                                  //| ))
+ 	import lists.operations.p14
+ 	p14.duplicate(ls)                         //> Duplicate the elements of a list.
+                                                  //| res12: List[Any] = List('a, 'a, 'a, 'a, 'a, 'a, 'a, 'a, 'b, 'b, 'c, 'c, 'c, 
+                                                  //| 'c, 'a, 'a, 'a, 'a, 'd, 'd, 'e, 'e, 'e, 'e, 'e, 'e, 'e, 'e)
+  import lists.operations.p15
+  p15.duplicateN(3, List('a, 'b, 'b, 'c))         //> (**) Duplicate the elements of a list a given number of times.
+                                                  //| res13: List[Any] = List('a, 'a, 'a, 'b, 'b, 'b, 'b, 'b, 'b, 'c, 'c, 'c)
  
  }
