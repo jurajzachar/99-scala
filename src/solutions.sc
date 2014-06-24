@@ -72,5 +72,15 @@ object solutions {
   import lists.operations.p15
   p15.duplicateN(3, List('a, 'b, 'b, 'c))         //> (**) Duplicate the elements of a list a given number of times.
                                                   //| res13: List[Any] = List('a, 'a, 'a, 'b, 'b, 'b, 'b, 'b, 'b, 'c, 'c, 'c)
- 
+  
+  import lists.operations.p16
+  p16.drop(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
+                                                  //> (**) Drop every Nth element from a list.
+                                                  //| res14: List[Any] = List('a, 'b, 'd, 'e, 'g, 'h, 'j, 'k)
+  import lists.operations.p17
+  p17.split(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
+                                                  //> (*) Split a list into two parts. The length of the first part is given. Use
+                                                  //|  a Tuple for your result.
+                                                  //| res15: (List[Any], List[Any]) = (List('a, 'b, 'c),List('d, 'e, 'f, 'g, 'h, 
+                                                  //| 'i, 'j, 'k))
  }
