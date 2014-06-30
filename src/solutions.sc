@@ -83,4 +83,10 @@ object solutions {
                                                   //|  a Tuple for your result.
                                                   //| res15: (List[Any], List[Any]) = (List('a, 'b, 'c),List('d, 'e, 'f, 'g, 'h, 
                                                   //| 'i, 'j, 'k))
+  import lists.operations.p18
+  p18.slice(3, 7, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
+                                                  //> (**) Extract a slice from a list.
+                                                  //| res16: List[Any] = List('d, 'e, 'f, 'g)
+  
+  
  }
