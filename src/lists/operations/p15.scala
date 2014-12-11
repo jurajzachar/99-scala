@@ -12,6 +12,5 @@ object p15 {
       case Nil => Nil
       case x :: xs => fill(k, x) ::: duplicateN(k, xs) 
     }
-    
   }
 }

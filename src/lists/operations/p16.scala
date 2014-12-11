@@ -20,7 +20,6 @@ object p16 {
 
         }
       }
-
     wrapper(1, l)
   }
 }
