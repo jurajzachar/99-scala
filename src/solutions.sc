@@ -70,11 +70,11 @@ object solutions {
 
   p20.removeAt(4,  List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
                                                   //> (*) Remove the Kth element from a list.
-                                                  //| res18: (List[Any], _$1085) = (List('a, 'b, 'c, 'd, 'f, 'g, 'h, 'i, 'j, 'k),'
-                                                  //| e)
-  p20.removeAt(0, il)                             //> res19: (List[Any], _$1085) = (List(1, 2, 3, 4, 5, 6, 7, 8, 9),0)
-  p20.removeAt(9, il)                             //> res20: (List[Any], _$1085) = (List(0, 1, 2, 3, 4, 5, 6, 7, 8),9)
+                                                  //| res18: (List[Any], _$1) = (List('a, 'b, 'c, 'd, 'f, 'g, 'h, 'i, 'j, 'k),'e)
+  p20.removeAt(0, il)                             //> res19: (List[Any], _$1) = (List(1, 2, 3, 4, 5, 6, 7, 8, 9),0)
+  p20.removeAt(9, il)                             //> res20: (List[Any], _$1) = (List(0, 1, 2, 3, 4, 5, 6, 7, 8),9)
   
+
   p21.insertAt('foo, il.size/2, il)               //> (*) Insert an element at a given position into a list.
                                                   //| res21: List[Any] = List(0, 1, 2, 3, 4, 'foo, 5, 6, 7, 8, 9)
   p22.range(1, 5)                                 //> (*) Create a list containing all integers within a given range.
@@ -82,12 +82,12 @@ object solutions {
   val bigList = p22.range(0,25)                   //> bigList  : List[Int] = List(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1
                                                   //| 4, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25)
   p23.randomSelect(5, bigList)                    //> (**) Extract a given number of randomly selected elements from a list.
-                                                  //| res23: List[Any] = List(25, 17, 16, 12, 0)
+                                                  //| res23: List[Any] = List(16, 2, 1, 5, 0)
   p24.lotto(10, 25)                               //> (*) Lotto: Draw N different random numbers from the set 1..M.
-                                                  //| res24: List[Any] = List(2, 23, 7, 10, 22, 9, 21, 15, 17, 1)
+                                                  //| res24: List[Any] = List(11, 21, 12, 6, 25, 16, 7, 1, 17, 2)
   p25.randomPermute(bigList)                      //> P25 (*) Generate a random permutation of the elements of a list.
-                                                  //| res25: List[Any] = List(18, 1, 13, 8, 14, 9, 0, 20, 11, 16, 22, 10, 23, 5, 
-                                                  //| 2, 19, 6, 21, 17, 15, 7, 24, 4, 12, 25, 3)
+                                                  //| res25: List[Any] = List(16, 5, 1, 22, 3, 7, 17, 19, 12, 20, 10, 9, 15, 0, 8
+                                                  //| , 18, 6, 24, 11, 23, 4, 21, 25, 14, 13, 2)
   p26.combinations(5, Set('a, 'b, 'c, 'd, 'e, 'f)).foreach(x=>println(x))
                                                   //> Set('e, 'f, 'a, 'b, 'd)
                                                   //| Set('e, 'f, 'b, 'c, 'd)
