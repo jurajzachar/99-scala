@@ -16,7 +16,7 @@ object p26 extends App {
         if (k == 0) {
           Set(outSet)
         } else {
-          { for (x <- inSet) yield enumerate(outSet + x, k - 1, inSet - x) }.flatten
+           for (x <- inSet) yield enumerate(outSet + x, k - 1, inSet - x) flatten
         }
       }
       enumerate(Set(), k, nSet)
