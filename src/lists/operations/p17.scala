@@ -1,9 +1,9 @@
 package lists.operations
 
 object p17 {
-	
+
   println("(*) Split a list into two parts. The length of the first part is given. Use a Tuple for your result.")
-  
+
   def split(size: Int, l: List[Any]): (List[Any], List[Any]) = {
     l match {
       case Nil => (Nil, l)

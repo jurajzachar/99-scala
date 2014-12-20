@@ -1,7 +1,8 @@
+.worksheet
 target
 .worksheet
 .classpath
 .settings
 .DS_Store
 .cache
-/bin
+bin
