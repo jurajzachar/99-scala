@@ -9,7 +9,8 @@ object solutions {
                                                   //> ls  : List[Symbol] = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e
                                                   //| , 'e)
 
-  import lists.operations._
+  import lists._
+  
   p01.last(l)                                     //> Find the last element of a list
                                                   //| res0: Any = 8
 
@@ -18,8 +19,7 @@ object solutions {
 
   p03.nth(2, l)                                   //> Find the Kth element of a list
                                                   //| res2: Any = 2
-  p04.length(l)                                   //> Find the number of elements of a list.
-                                                  //| res3: Int = 6
+  p04.length(l)                                   //> res3: Int = 6
 
   p05.reverse(l)                                  //> Reverse a list
                                                   //| res4: List[Any] = List(8, 5, 3, 2, 1, 1)
@@ -68,26 +68,30 @@ object solutions {
                                                   //> (**) Rotate a list N places to the left.
                                                   //| res17: List[Any] = List('d, 'e, 'f, 'g, 'h, 'i, 'j, 'k, 'a, 'b, 'c)
 
-  p20.removeAt(4,  List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
+  p20.removeAt(4, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
                                                   //> (*) Remove the Kth element from a list.
-                                                  //| res18: (List[Any], _$1) = (List('a, 'b, 'c, 'd, 'f, 'g, 'h, 'i, 'j, 'k),'e)
-  p20.removeAt(0, il)                             //> res19: (List[Any], _$1) = (List(1, 2, 3, 4, 5, 6, 7, 8, 9),0)
-  p20.removeAt(9, il)                             //> res20: (List[Any], _$1) = (List(0, 1, 2, 3, 4, 5, 6, 7, 8),9)
-  
+                                                  //| res18: (List[Any], _$4) = (List('a, 'b, 'c, 'd, 'f, 'g, 'h, 'i, 'j, 'k),'e)
+  p20.removeAt(0, il)                             //> res19: (List[Any], _$4) = (List(1, 2, 3, 4, 5, 6, 7, 8, 9),0)
+  p20.removeAt(9, il)                             //> res20: (List[Any], _$4) = (List(0, 1, 2, 3, 4, 5, 6, 7, 8),9)
 
-  p21.insertAt('foo, il.size/2, il)               //> (*) Insert an element at a given position into a list.
+  p21.insertAt('foo, il.size / 2, il)             //> (*) Insert an element at a given position into a list.
                                                   //| res21: List[Any] = List(0, 1, 2, 3, 4, 'foo, 5, 6, 7, 8, 9)
   p22.range(1, 5)                                 //> (*) Create a list containing all integers within a given range.
                                                   //| res22: List[Int] = List(1, 2, 3, 4, 5)
-  val bigList = p22.range(0,25)                   //> bigList  : List[Int] = List(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1
+  val bigList = p22.range(0, 25)                  //> bigList  : List[Int] = List(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1
                                                   //| 4, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25)
   p23.randomSelect(5, bigList)                    //> (**) Extract a given number of randomly selected elements from a list.
-                                                  //| res23: List[Any] = List(15, 5, 9, 17, 0)
+                                                  //| res23: List[Any] = List(9, 24, 5, 23, 0)
   p24.lotto(10, 25)                               //> (*) Lotto: Draw N different random numbers from the set 1..M.
-                                                  //| res24: List[Any] = List(19, 12, 2, 20, 11, 15, 22, 17, 13, 1)
+                                                  //| res24: List[Any] = List(15, 12, 3, 24, 6, 7, 19, 11, 25, 1)
   p25.randomPermute(bigList)                      //> P25 (*) Generate a random permutation of the elements of a list.
-                                                  //| res25: List[Any] = List(19, 15, 3, 11, 16, 10, 21, 20, 9, 17, 13, 2, 6, 18,
-                                                  //|  12, 25, 22, 7, 14, 4, 23, 24, 8, 0, 5, 1)
-  p26.combinations(4, Set('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'j, 'k, 'l, 'm, 'n, 'o, 'p)).foreach(x=>println(x))
-                                                  //> Set('e, 'n, 'j, 'f, 'a, 'm, 'b, 'g, 'l, 'p, 'c, 'h, 'k, 'o, 'd)
+                                                  //| res25: List[Any] = List(7, 10, 16, 21, 22, 20, 13, 5, 4, 18, 14, 2, 15, 19,
+                                                  //|  24, 6, 12, 3, 1, 23, 17, 25, 0, 8, 11, 9)
+  p26.combinations(5, Set('a, 'b, 'c, 'd, 'e, 'f)).foreach(x => println(x))
+                                                  //> Set('e, 'f, 'a, 'b, 'd)
+                                                  //| Set('e, 'f, 'b, 'c, 'd)
+                                                  //| Set('f, 'a, 'b, 'c, 'd)
+                                                  //| Set('e, 'f, 'a, 'b, 'c)
+                                                  //| Set('e, 'a, 'b, 'c, 'd)
+                                                  //| Set('e, 'f, 'a, 'c, 'd)
 }
