@@ -75,27 +75,4 @@ object logicWorksheet {
                                                   //| false		true		false
                                                   //| false		false		false
   
- type Pair = (String, Int)
- implicit def pairComparator(a:Pair, b:Pair) = a._2 < b._2
-                                                  //> pairComparator: (a: logic.logicWorksheet.Pair, b: logic.logicWorksheet.Pair)
-                                                  //| Boolean
- implicit def addStrings(a: String, b: String) = a + b
-                                                  //> addStrings: (a: String, b: String)String
- implicit def addInts(a: Int, b: Int) = a + b     //> addInts: (a: Int, b: Int)Int
- val elements = List(("a", 45), ("b", 13), ("c", 12), ("d", 16), ("e", 9), ("f", 5))
-                                                  //> elements  : List[(String, Int)] = List((a,45), (b,13), (c,12), (d,16), (e,9)
-                                                  //| , (f,5))
- val ht = new HuffmanTree[String, Int](elements)  //> ht  : logic.HuffmanTree[String,Int] = [root: (acbfed,100), left: (a,45), rig
-                                                  //| ht: (cbfed,55)]
-                                                  //| [root: (a,45)]
-                                                  //| [root: (cbfed,55), left: (cb,25), right: (fed,30)]
-                                                  //| [root: (cb,25), left: (c,12), right: (b,13)]
-                                                  //| [root: (c,12)]
-                                                  //| [root: (b,13)]
-                                                  //| [root: (fed,30), left: (fe,14), right: (d,16)]
-                                                  //| [root: (fe,14), left: (f,5), right: (e,9)]
-                                                  //| [root: (f,5)]
-                                                  //| [root: (e,9)]
-                                                  //| [root: (d,16)]
-  
 }
