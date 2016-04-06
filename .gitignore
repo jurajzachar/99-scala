@@ -3,6 +3,7 @@
 target
 .worksheet
 .classpath
+.project
 .settings
 .DS_Store
 .cache
